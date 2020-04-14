@@ -8,6 +8,7 @@ run = True
 
 
 def perform_maths():
+    print('starting again')
     global run
     global previous
     equation = ""
@@ -27,9 +28,9 @@ def perform_maths():
         print('The answer is: ', previous)
     new = input('Do you want to start again? y/n')
     if new == 'y':
-        previous == 0
-    else:
-        previous == eval(str(previous) + equation)
+        previous = 0
+    if new == 'n':
+        pass
 
 
 while run:
