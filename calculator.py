@@ -3,14 +3,12 @@ import re
 print('Calculator')
 print("Enter 'quit' to exit.")
 
-previous = 0
 run = True
 
 
 def perform_maths():
-    print('starting again')
     global run
-    global previous
+    previous = 0
     equation = ""
     if previous == 0:
         equation = input('Enter equation: ')
@@ -26,11 +24,6 @@ def perform_maths():
         else:
             previous = eval(str(previous) + equation)
         print('The answer is: ', previous)
-    new = input('Do you want to start again? y/n')
-    if new == 'y':
-        previous = 0
-    if new == 'n':
-        pass
 
 
 while run:
